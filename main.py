@@ -22,7 +22,7 @@ def render_scene(screen, scene, width, height):
 
 # Inicjalizacja Pygame
 pygame.init()
-width, height = 800, 800
+width, height = 600, 600
 screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Ray Tracing with Phong Model")
 
@@ -89,8 +89,8 @@ while running:
             if event.key == pygame.K_d:
                     print("Spehere material changed - start scene computation") 
                     
-                    scene.set_object(Sphere(center=[0, 0, -1], radius=0.5, color=[0.76, 0.69, 0.5], ambient=np.array([0.2, 0.15, 0.1]), diffuse=np.array([0.76, 0.69, 0.5]), specular=np.array([0.2, 0.2, 0.2]), shininess=50))
-                    #scene.set_object(Sphere(center=[0, 0, -1], radius=0.5, color=[0.7038, 0.27048, 0.0828], ambient = np.array([0.19125, 0.0735, 0.0225]), diffuse =  np.array([0.7038, 0.27048, 0.0828]), specular = np.array([0.256777, 0.137622, 0.086014]), shininess = 12.8))
+                    #scene.set_object(Sphere(center=[0, 0, -1], radius=0.5, color=[0.76, 0.69, 0.5], ambient=np.array([0.2, 0.15, 0.1]), diffuse=np.array([0.76, 0.69, 0.5]), specular=np.array([0.2, 0.2, 0.2]), shininess=50))
+                    scene.set_object(Sphere(center=[0, 0, -1], radius=0.5, color=[0.7038, 0.27048, 0.0828], ambient = np.array([0.19125, 0.0735, 0.0225]), diffuse =  np.array([0.7038, 0.27048, 0.0828]), specular = np.array([0.356777, 0.237622, 0.186014]), shininess = 12.8))
                     sphere_mat_change_counter += 1
                     render_scene(screen, scene, width, height)
 
